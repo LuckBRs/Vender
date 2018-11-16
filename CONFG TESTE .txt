@@ -1,0 +1,226 @@
+
+Licença: '0000-0000-0000'
+
+#
+
+#A permissão pra usar o shif para vender é: quicksell.shiftsell
+
+#Comando para abrir o menu de vender: /vender menu OU /vender (caso o shiftsell esteja ativo)
+
+#Comando ver o top5: /vender top
+
+#
+
+#Nome do multiplicador:multiplicador de valor
+
+# Exemplo: Caso o player tiver a permissão quicksell.multiplier.vip, será adicionado 80% do valor do produto ao valor atual.
+
+#Exemplos de valores a seguir
+
+#0.1 = 10%
+
+#1 = 100%
+
+#0.8 = 80% 
+
+#1.5 = 150%
+
+Multiplicadores:
+
+- 'vip;0.8'
+
+- 'vip2;0.3'
+
+#ID do item;Preco de 1 Unidade
+
+# Exemplo: 1 pedra por 5 reais = 1;5
+
+#Caso queira que por exemplo, adicionar o multiplicador no item, adicione "-<nome do multiplicador>" (incluido nos exemplos)
+
+Itens:
+
+- '264;10400-vip'
+
+- '266;330-vip,vip2'
+
+- '388;40000'
+
+
+
+#Jeito que irá formatar o dinheiro na mensagem
+
+#TIPO 1 = ABRE******** (Exemplo: 1k, 1M, 1T, 1Q)
+
+#TIPO 2 = NORMAL (Exemplo: 1.000$)
+
+#TIPO 3 = SEM FORMATAÇÃO (Exemplo: 100000)
+
+Formatacao: 1
+
+Mensagens:
+
+   Sem_permissao: '&cSem permissão.'
+
+   Sem_item:
+
+      Mensagem:
+
+         #Coloque "desativar" para desativar a mensagem (O mesmo serve para actionbar).
+
+         Chat: 'desativar'
+
+         ActionBar: '&cVocê não possui itens para vender.'
+
+      #Coloque "desativar" para desativar, ou o nome do som para toca-lo.
+
+      Som: 'NOTE_BASS'
+
+   Vendeu: 
+
+      Mensagem:
+
+         #Coloque "desativar" para desativar a mensagem (O mesmo serve para actionbar).
+
+         Chat: 'desativar'
+
+         ActionBar: '&aTodos os itens(&f%quantidade%&a) foram vendidos por &f%valor%&a!'
+
+      #Coloque "desativar" para desativar, ou o nome do som para toca-lo.
+
+      Som: 'LEVEL_UP'
+
+Top5_Inventario:
+
+   Titulo: '&9Top 10 vendedores'
+
+   #Este é o tempo para atualizar o TOP
+
+   #Quanto maior o tempo, menos lag irá gerar.
+
+   #Recomendado deixar acima de 60.
+
+   Tempo_de_atualizar: 60
+
+   Item:
+
+      Nome: '&a%player% &7- &a%posicao%'
+
+      Lore:
+
+      - '&7Este jogador vendeu %vezes% vezes.'
+
+      - '&7Ele já vendeu %itens% itens.'
+
+Inventario:
+
+   Titulo: '&9Configurações de venda'
+
+   Tamanho: 27
+
+   Bolsa:
+
+      Slot: 8
+
+      #Quando a bolsa estiver desativada, oque vai aparecer no placeholder %valoratual%?
+
+      Bolsa_desativada_placeholder: "Desativada"
+
+      Item:
+
+         #Caso queira item com data, adicione remova o # da linha Data
+
+         ID: 175
+
+         Data: 0
+
+         Nome: '&eBolsa de valores'
+
+         Lore:
+
+         - '&7A bolsa atual está em &f%valoratual%'
+
+   Estatistica:
+
+      Slot: 14
+
+      Item:
+
+         #Caso queira item com data, adicione remova o # da linha Data
+
+         ID: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI5NWE5MjkyMzZjMTc3OWVhYjhmNTcyNTdhODYwNzE0OThhNDg3MDE5Njk0MWY0YmZlMTk1MWU4YzZlZTIxYSJ9fX0=
+
+         #Data: 5
+
+         Nome: '&eEstatisticas'
+
+         Lore:
+
+         - ''
+
+         - '&7Você já vendeu &e%vendas% &7vezes.'
+
+         - '&7Você vendeu ao todo &e%itens% &7itens.'
+
+         - ''
+
+   Ativado_Desativado:
+
+      Slot: 12
+
+      Shift_ativado:
+
+         #Caso queira item com data, adicione remova o # da linha Data
+
+         ID: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzYxZTViMzMzYzJhMzg2OGJiNmE1OGI2Njc0YTI2MzkzMjM4MTU3MzhlNzdlMDUzOTc3NDE5YWYzZjc3In19fQ==
+
+         #Data: 5
+
+         Nome: '&aVenda rápida'
+
+         Lore:
+
+         - '&7Clique para desativar a venda rápida'
+
+         - '&7(Venda ao apertar o shift)'
+
+      Shift_desativado:
+
+         #Caso queira item com data, use : (Exemplo: 351:4)
+
+         ID: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y0NmMzMWQ2ZWU2ZWE2MTlmNzJlNzg1MjMyY2IwNDhhYjI3MDQ2MmRiMGNiMTQ1NDUxNDQzNjI1MWMxYSJ9fX0=
+
+         Nome: '&cVenda rápida'
+
+         Lore:
+
+         - '&7Clique para ativar a venda rápida'
+
+         - '&7(Venda ao apertar o shift)'
+
+Bolsa_de_valores:
+
+   Ativar: true
+
+   #tempo em segundos
+
+   Tempo: 120
+
+   Porcentagens:
+
+      minima: 1
+
+      maxima: 100
+
+   Mensagem:
+
+   - '&a&lBOLSA DE VALORES'
+
+   - '&7A bolsa atualizou!'
+
+   - '&7Antes era: &f%valor_antigo%'
+
+   - '&7Agora é: &f%valor_atual%'
+
+   #Coloque "desativar" para desativar, ou o nome do som para toca-lo.
+
+   Som: 'CLICK'
